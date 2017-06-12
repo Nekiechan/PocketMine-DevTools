@@ -219,7 +219,8 @@ class DevTools extends PluginBase implements CommandExecutor{
 		if(version_compare($server->getApiVersion(), "3.0.0-ALPHA5") >= 0){
 			$metadata["protocol"] = \pocketmine\network\mcpe\protocol\ProtocolInfo::CURRENT_PROTOCOL;
 		}else{
-			$metadata["protocol"] = \pocketmine\network\protocol\Info::CURRENT_PROTOCOL;
+			$metadata["protocol"] =  \pocketmine\network\mcpe\protocol\ProtocolInfo::CURRENT_PROTOCOL;
+	
 		}
 
 		$phar->setMetadata($metadata);
